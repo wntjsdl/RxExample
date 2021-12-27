@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,8 @@
 		3ED5B1852774827600D52344 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3ED5B1832774827600D52344 /* Main.storyboard */; };
 		3ED5B1872774827800D52344 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3ED5B1862774827800D52344 /* Assets.xcassets */; };
 		3ED5B18A2774827800D52344 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3ED5B1882774827800D52344 /* LaunchScreen.storyboard */; };
+		3EE54E662779963C00703B43 /* CityPrototypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE54E652779963C00703B43 /* CityPrototypeCell.swift */; };
+		3EE54E692779A62E00703B43 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE54E682779A62E00703B43 /* DetailViewController.swift */; };
 		D40502A9E9265541542CD53A /* Pods_RxExample2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61E1F62052536B3A54BAF197 /* Pods_RxExample2.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +27,8 @@
 		3ED5B1862774827800D52344 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3ED5B1892774827800D52344 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3ED5B18B2774827800D52344 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3EE54E652779963C00703B43 /* CityPrototypeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityPrototypeCell.swift; sourceTree = "<group>"; };
+		3EE54E682779A62E00703B43 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		525215E17B4F47C6CE83D1FF /* Pods-RxExample2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxExample2.debug.xcconfig"; path = "Target Support Files/Pods-RxExample2/Pods-RxExample2.debug.xcconfig"; sourceTree = "<group>"; };
 		61E1F62052536B3A54BAF197 /* Pods_RxExample2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxExample2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8ED761562AC2914A071FDBDC /* Pods-RxExample2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxExample2.release.xcconfig"; path = "Target Support Files/Pods-RxExample2/Pods-RxExample2.release.xcconfig"; sourceTree = "<group>"; };
@@ -48,7 +52,6 @@
 				525215E17B4F47C6CE83D1FF /* Pods-RxExample2.debug.xcconfig */,
 				8ED761562AC2914A071FDBDC /* Pods-RxExample2.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -76,10 +79,12 @@
 				3ED5B17D2774827600D52344 /* AppDelegate.swift */,
 				3ED5B17F2774827600D52344 /* SceneDelegate.swift */,
 				3ED5B1812774827600D52344 /* ViewController.swift */,
+				3EE54E652779963C00703B43 /* CityPrototypeCell.swift */,
 				3ED5B1832774827600D52344 /* Main.storyboard */,
 				3ED5B1862774827800D52344 /* Assets.xcassets */,
 				3ED5B1882774827800D52344 /* LaunchScreen.storyboard */,
 				3ED5B18B2774827800D52344 /* Info.plist */,
+				3EE54E682779A62E00703B43 /* DetailViewController.swift */,
 			);
 			path = RxExample2;
 			sourceTree = "<group>";
@@ -207,6 +212,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3ED5B1822774827600D52344 /* ViewController.swift in Sources */,
+				3EE54E662779963C00703B43 /* CityPrototypeCell.swift in Sources */,
+				3EE54E692779A62E00703B43 /* DetailViewController.swift in Sources */,
 				3ED5B17E2774827600D52344 /* AppDelegate.swift in Sources */,
 				3ED5B1802774827600D52344 /* SceneDelegate.swift in Sources */,
 			);

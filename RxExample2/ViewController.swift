@@ -10,7 +10,7 @@ import SnapKit
 import RxCocoa
 import RxSwift
 
-class ViewController: UIViewController, UITableViewDataSource {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     var searchBar: UISearchBar!
     var cityTableView: UITableView!
@@ -27,6 +27,7 @@ class ViewController: UIViewController, UITableViewDataSource {
         cityTableView = UITableView(frame: .zero)
         
         cityTableView.dataSource = self
+        cityTableView.delegate = self
         cityTableView.register(CityPrototypeCell.self, forCellReuseIdentifier: "cell")
         
         /// UI addSubview
@@ -57,6 +58,23 @@ class ViewController: UIViewController, UITableViewDataSource {
                 self.cityTableView.reloadData() // 테이블 뷰를 다시 불러옵니다.
             })
             .disposed(by: disposeBag)
+        
+        searchBar
+            .rx.text
+            .filter { $0 == "" }
+            .subscribe(onNext: { [weak self] _ in
+                self?.shownCities = []
+                self?.cityTableView.reloadData()
+            }).disposed(by: disposeBag)
+        
+        cityTableView.rx.itemSelected
+          .subscribe(onNext: { [weak self] indexPath in
+//            let cell = self?.cityTableView.cellForRow(at: indexPath) as? CityPrototypeCell
+//            cell.button.isEnabled = false
+            let detailVC = DetailViewController()
+            detailVC.titleLabel?.text = "test"
+            self?.navigationController?.pushViewController(detailVC, animated: true)
+          }).disposed(by: disposeBag)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -69,7 +87,14 @@ class ViewController: UIViewController, UITableViewDataSource {
 
         return cell
     }
-
-
+    
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        let detailVC = DetailViewController()
+//        detailVC.titleLabel?.text = "test"
+//        detailVC.titleLabel?.text = "\(indexPath)"
+//        navigationController?.pushViewController(detailVC, animated: true)
+//        present(detailVC, animated: true, completion: nil)
+//    }
+    
 }
 
